@@ -1,0 +1,180 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right bottom, #FF5F6D, #FFC371);
+}
+
+.wrapper{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5em;
+    border: 3px solid rgb(201, 201, 201);
+    border-radius: 2em;
+    padding: 1.5em;
+    max-width: 90%; /* Batasi lebar untuk perangkat kecil */
+}
+
+h1{
+    font-size: 2em;
+}
+
+h3{
+    color: #FF5F6D;
+    font-size: 1.5em;
+}
+
+#choices{
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap; /* Supaya tombol tetap rapi di layar kecil */
+}
+
+#choices button{
+    padding: 0.5em 1.2em;
+    border-radius: 0.5em;
+    font-size: 2em; /* Sesuaikan font awal */
+    border: 3px solid transparent;
+    cursor: pointer;
+}
+
+#choices button:hover{
+    background-color: white;
+    border: 3px solid #FFC371;
+    transition: 0.3s ease-in-out;
+    transform: scale(1.05);
+}
+
+#player-choice,
+#computer-choice{
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+#resultDisplay{
+    font-size: 2.5em;
+    border: 3px solid #FFC371;
+    border-radius: 0.5em;
+    padding: 10px 50px;
+}
+
+/* Responsive settings */
+
+/* Mobile Portrait */
+@media (max-width: 480px) {
+    .wrapper {
+        padding: 1em;
+        gap: 1.5em;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+    h3 {
+        font-size: 1.2em;
+    }
+    #choices button {
+        font-size: 1.5em;
+        padding: 0.4em 1em;
+    }
+    #player-choice, #computer-choice {
+        font-size: 1.2em;
+    }
+    #resultDisplay {
+        font-size: 2em;
+        padding: 10px 30px;
+    }
+}
+
+/* Mobile Landscape */
+@media (min-width: 481px) and (max-width: 767px) and (orientation: landscape) {
+    .wrapper {
+        padding: 1em;
+        gap: 2em;
+    }
+    h1 {
+        font-size: 1.8em;
+    }
+    h3 {
+        font-size: 1.3em;
+    }
+    #choices button {
+        font-size: 1.8em;
+    }
+    #resultDisplay {
+        font-size: 2.2em;
+        padding: 10px 40px;
+    }
+}
+
+/* Tablet Portrait */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .wrapper {
+        padding: 2em;
+        max-width: 80%;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    h3 {
+        font-size: 1.5em;
+    }
+    #choices button {
+        font-size: 2em;
+    }
+    #resultDisplay {
+        font-size: 2.5em;
+        padding: 10px 50px;
+    }
+}
+
+/* Tablet Landscape */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .wrapper {
+        padding: 2em;
+        max-width: 70%;
+    }
+    h1 {
+        font-size: 2.2em;
+    }
+    h3 {
+        font-size: 1.6em;
+    }
+    #choices button {
+        font-size: 2.2em;
+    }
+    #resultDisplay {
+        font-size: 2.7em;
+        padding: 15px 60px;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1025px) {
+    .wrapper {
+        padding: 3em;
+        max-width: 60%;
+    }
+    h1 {
+        font-size: 2.5em;
+    }
+    h3 {
+        font-size: 2em;
+    }
+    #choices button {
+        font-size: 2.5em;
+    }
+    #resultDisplay {
+        font-size: 3em;
+        padding: 20px 80px;
+    }
+}
